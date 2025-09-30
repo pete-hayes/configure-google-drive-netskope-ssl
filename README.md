@@ -1,7 +1,7 @@
 # configure-google-drive-netskope
 A Bash script that configures **Google Drive for Desktop on macOS** to trust SSL certificates when behind **Netskope SSL Decryption**. 
 
-Unlike most apps on macOS, Google Drive maintains its own certificate store and doesn't trust the system store. This script bundles Netskope’s CA certificates together with Mozilla’s trusted root CA bundle, ensuring Google Drive continues to function correctly whether Netskope SSL decryption is enabled or disabled. It then updates Google Drive’s [TrustedRootCertsFile](https://support.google.com/a/answer/7644837?hl=en) setting and restarts the app to apply changes.
+Unlike most apps on macOS, Google Drive maintains its own certificate store and doesn't trust the system store. This script bundles Netskope’s CA certificates together with Mozilla’s trusted root CA bundle, ensuring Google Drive continues to function correctly whether Netskope SSL Decryption is enabled or disabled. It then updates Google Drive’s [TrustedRootCertsFile](https://support.google.com/a/answer/7644837?hl=en) setting and restarts the app to apply changes.
 
 ## Features
 - Validates required tools and dependencies  
@@ -34,8 +34,8 @@ Edit the **CONFIGURATION** section at the top of the script:
 - **TENANT_NAME** — your Netskope tenant FQDN (e.g., example.goskope.com)
 - **ORG_KEY** — found within the Netskope Administrator Portal under Settings > Security Cloud Platform > MDM Distribution > Organization ID
 - **ALLOW_INSECURE_SSL** — allow cURL to skip SSL/TLS validation (`true`/`false`)  
-  - Default: `true`  
-  - cURL may not trust Netskope’s certificate by default. In those cases you can either configure cURL to trust the Netskope CA, treat cURL as a certificate-pinned application, or bypass the domain `curl.se` from SSL decryption.  
+  - Default: `true` (cURL may not trust Netskope’s certificate by default.)
+  - If set to `false`, you can either configure cURL to trust the Netskope CA, configure cURL as a [certificate pinned application](https://docs.netskope.com/en/certificate-pinned-applications/) in Netskope, or bypass the domain `curl.se` from Netskope SSL Decryption.  
 - **CERT_FILENAME** — certificate bundle filename
 - **LOG_MODE** — choose `cli`, `file`, or `both`
 
