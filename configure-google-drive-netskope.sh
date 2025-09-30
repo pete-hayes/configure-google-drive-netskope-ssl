@@ -2,7 +2,7 @@
 
 ################################################################################
 # Google Drive + Netskope Certificate Bundle Configuration
-# Version: 1.5
+# Version: 1.5.1
 #
 # This script configures Google Drive for Desktop to trust SSL certificates
 # when behind Netskope SSL decryption. It downloads and bundles together
@@ -126,6 +126,12 @@ log_success() { log_output "SUCCESS" "$*"; }
 ################################################################################
 # Requirement Checks
 ################################################################################
+
+if [[ $EUID -ne 0 ]]; then
+    log_error "This script must be run with sudo/root privileges."
+    log_info "Usage: sudo $0"
+    exit 1
+fi
 
 check_requirements() {
     log_info "Checking requirements..."
