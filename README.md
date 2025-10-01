@@ -42,7 +42,8 @@ Edit the **CONFIGURATION** section at the top of the script:
 - **LOG_MODE** — choose `cli`, `file`, or `both`
 
 ## Future Updates
-A comparable script for Google Drive for Desktop on Windows is in development.
+- Support for passing tenant FQDN and organization ID as command-line arguments, rather than hardcoding values in the script.
+- A comparable script for Google Drive for Desktop on Windows is in development.
 
 ## License
 Licensed under MIT — free to use, modify, and share, with no warranty.
