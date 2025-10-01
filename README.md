@@ -41,8 +41,9 @@ Edit the **CONFIGURATION** section at the top of the script:
 - **CERT_FILENAME** — certificate bundle filename
 - **LOG_MODE** — choose `cli`, `file`, or `both`
 
-## Future Updates
-- Support for passing tenant FQDN and organization ID as command-line arguments, rather than hardcoding values in the script.
+## Planned Future Updates
+- Ability to pass tenant FQDN and organization ID as command-line arguments, rather than hardcoding values in the script.
+- Option to exclude the Mozilla CA bundle and trust only Netskope’s certificates.
 - A comparable script for Google Drive for Desktop on Windows is in development.
 
 ## License
