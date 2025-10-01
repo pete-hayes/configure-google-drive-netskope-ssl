@@ -7,7 +7,7 @@ Unlike most apps on macOS, Google Drive maintains its own certificate store and 
 - Validates required tools and dependencies  
 - Downloads Netskope root and intermediate CA certificates, plus Mozilla’s CA bundle  
 - Detects and replaces stale certificate bundles  
-- Updates Google Drive’s 'TrustedRootCertsFile' setting to use the new bundle  
+- Updates Google Drive’s `TrustedRootCertsFile` setting to use the new bundle  
 - Supports configurable logging (CLI, file, or both)  
 - Cleanly restarts Google Drive to apply changes
 
