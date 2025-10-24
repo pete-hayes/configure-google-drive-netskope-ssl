@@ -1,4 +1,5 @@
-# configure-google-drive-netskope-ssl
+# Netskope-SSL-Decryption-for-Google-Drive-Client
+
 A Bash script that configures **Google Drive for Desktop on macOS** to trust SSL certificates when behind **Netskope SSL Decryption**. 
 
 Unlike most apps on macOS, Google Drive maintains its own certificate store and doesn't trust the system store. This script bundles Netskope’s CA certificates together with Mozilla’s trusted root CA bundle, ensuring Google Drive continues to function correctly whether Netskope SSL Decryption is enabled or disabled. It then updates Google Drive’s [TrustedRootCertsFile](https://support.google.com/a/answer/7644837?hl=en) setting and restarts the app to apply changes.
