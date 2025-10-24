@@ -1,4 +1,4 @@
-# Netskope-SSL-Decryption-for-Google-Drive-Client
+# Netskope-SSL-Decryption-with-Google-Drive-Client
 
 A Bash script that configures **Google Drive for Desktop on macOS** to trust SSL certificates when behind **Netskope SSL Decryption**. 
 
